@@ -1,6 +1,6 @@
 {
-  "name": "ShowArtWork",
-  "title": "Show Art Work",
+  "name": "ShowArtwork",
+  "title": "Show Artwork",
   "description": "Shows Actor and Item artwork to players without having to find it in sidebar.",
   "authors": [{"name":"Will Saunders","email":"willsaunders1014@gmail.com" }],
   "version": "1.0.0",
