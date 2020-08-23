@@ -1,17 +1,17 @@
 {
   "name": "ShowArtWork",
   "title": "Show Art Work",
-  "description": "Shows Token's artwork to players without having to find it in actor window.",
+  "description": "Shows Actor and Item artwork to players without having to find it in sidebar.",
   "authors": [{"name":"Will Saunders","email":"willsaunders1014@gmail.com" }],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "minimumCoreVersion": "0.6.2",
   "compatibleCoreVersion":"0.6.5",
   "scripts": [
   	"showartwork.js"
   ],
   "socket": true,
-  "changelog":"https://raw.githubusercontent.com/wsaunders1014/LookAtThat/master/README.md",
-  "url":"https://github.com/wsaunders1014/LookAtThat",
-  "manifest":"https://raw.githubusercontent.com/wsaunders1014/LookAtThat/master/module.json",
-  "download":"https://github.com/wsaunders1014/LookAtThat/archive/master.zip"
+  "changelog":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/README.md",
+  "url":"https://github.com/wsaunders1014/showartwork",
+  "manifest":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/module.json",
+  "download":"https://github.com/wsaunders1014/showartwork/archive/1.0.0.zip"
 }
