@@ -9,9 +9,8 @@
   "scripts": [
   	"showartwork.js"
   ],
-  "socket": true,
-  "changelog":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/README.md",
-  "url":"https://github.com/wsaunders1014/showartwork",
-  "manifest":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/module.json",
-  "download":"https://github.com/wsaunders1014/showartwork/archive/1.0.0.zip"
+  "changelog":"https://raw.githubusercontent.com/wsaunders1014/ShowArtwork/1.0.0/README.md",
+  "url":"https://github.com/wsaunders1014/ShowArtwork",
+  "manifest":"https://raw.githubusercontent.com/wsaunders1014/ShowArtwork/1.0.0/module.json",
+  "download":"https://github.com/wsaunders1014/ShowArtwork/archive/1.0.0.zip"
 }
