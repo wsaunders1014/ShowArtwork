@@ -10,23 +10,25 @@ Hooks.once('init', function(){
       //onChange: x => window.location.reload()
     });
 });
-Hooks.on('canvasReady',()=>{
+Hooks.once('canvasReady',()=>{
 	$('body').on('click','.show-avatar', (e)=>{
-		
+	
 		let id = $(e.target).parents('.actor.sheet').attr('id').split('-')[1];
 		let actor = game.actors.get(id);
+		ui.notifications.info(game.i18n.format("SHOWART.message"));
 	  	game.socket.emit("shareImage", {
 	      image: actor.data.img,
-	      title: actor.data.name,
+	      title: "",
 	      uuid: game.actors.getName(actor.data.name).options.uuid
 	    });
 		
 	});
 	$('body').on('click','.show-item', (e)=>{
-		console.log()
+		
 		let id = $(e.target).prev('.window-title').html();
-		console.log(id);
+		
 		let item = game.items.getName(id);
+		ui.notifications.info(game.i18n.format("SHOWART.message"));
 	  	game.socket.emit("shareImage", {
 	      image: item.data.img,
 	      title: item.data.name,
@@ -37,7 +39,7 @@ Hooks.on('canvasReady',()=>{
 })
 Hooks.on('renderActorSheet', (actor)=>{
 	if(game.user.isGM || game.settings.get('ShowArtWork','gmOnly')==false){
-		console.log(actor.id);
+		
 		if($('#'+actor.id).find('.show-avatar').length == 0)
 			$('<a class="show-avatar"><i class="fas fa-eye"></i> Show Art</a>').insertAfter('#'+actor.id+' > header > h4');
 	}

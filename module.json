@@ -3,15 +3,22 @@
   "title": "Show Art Work",
   "description": "Shows Actor and Item artwork to players without having to find it in sidebar.",
   "authors": [{"name":"Will Saunders","email":"willsaunders1014@gmail.com" }],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumCoreVersion": "0.6.2",
-  "compatibleCoreVersion":"0.6.5",
+  "compatibleCoreVersion":"0.7.5",
   "scripts": [
   	"showartwork.js"
   ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
   "socket": true,
-  "changelog":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/README.md",
+  "changelog":"https://raw.githubusercontent.com/wsaunders1014/showartwork/master/README.md",
   "url":"https://github.com/wsaunders1014/showartwork",
-  "manifest":"https://raw.githubusercontent.com/wsaunders1014/showartwork/1.0.0/module.json",
+  "manifest":"https://raw.githubusercontent.com/wsaunders1014/showartwork/master/module.json",
   "download":"https://github.com/wsaunders1014/showartwork/archive/1.0.0.zip"
 }
