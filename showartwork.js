@@ -63,7 +63,7 @@ Hooks.on('renderActorSheet', (actor)=>{
 			e.stopPropagation();
 			console.log(e);
 			
-		//	$('.show-art-btn').unwrap().remove();
+			$('.show-art-btn').unwrap().remove();
 			
 		})
 	}
