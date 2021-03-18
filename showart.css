@@ -1,0 +1,14 @@
+.show-art-btn{
+	position: absolute;
+	bottom: 0px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.5);
+	color:#fff;
+	cursor: pointer;
+}
+.hover-wrap{
+	position: relative;
+	flex:0;
+	
+
+}
