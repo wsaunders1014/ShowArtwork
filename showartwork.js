@@ -1,5 +1,5 @@
 Hooks.once('init', function(){
-CONFIG.debug.hooks = true;
+
   game.settings.register('ShowArtWork', 'gmOnly', {
       name: "Only GM controlled tokens?",
       hint: "The Show Artwork button will only appear for GM.",
@@ -61,7 +61,7 @@ Hooks.on('renderActorSheet', (actor)=>{
 		})
 		$(actor._element).on('mouseleave','.hover-wrap',function(e){
 			e.stopPropagation();
-			console.log(e);
+			
 			
 			$('.show-art-btn').unwrap().remove();
 			
@@ -70,19 +70,19 @@ Hooks.on('renderActorSheet', (actor)=>{
 })
 Hooks.on('renderItemSheet',(item)=>{
 	if(game.user.isGM || game.settings.get('ShowArtWork','gmOnly')==false){
-		console.log(item);
+		
 		if($('#'+item.id).find('.show-item').length == 0)
 		$('<a class="show-item"><i class="fas fa-eye"></i> Show Art</a>').insertAfter('#'+item.id+' > header > h4');
 	}
 })
 Hooks.on('renderJournalSheet',(journal)=>{
-	console.log(journal);
+	
 	if(game.user.isGM || game.settings.get('ShowArtWork','gmOnly')==false){
 		$(journal._element).on('mouseover','img',function(e){
-			console.log(e);
+			
 			e.stopPropagation();
 			let img = $(e.currentTarget);
-			console.log(img)
+			
 			if(img.parent().hasClass('hover-wrap')) return false;
 			img.wrap("<span class='hover-wrap'></span>");
 			img.after('<div class="show-art-btn" style="left:'+img.position().left+'px"><i class="fas fa-eye"></i> Show Art</div>');
@@ -100,7 +100,7 @@ Hooks.on('renderJournalSheet',(journal)=>{
 		})
 		$(journal._element).on('mouseleave','.hover-wrap',function(e){
 			e.stopPropagation();
-			console.log(e);
+			
 			
 			$('.show-art-btn').unwrap().remove();
 			
