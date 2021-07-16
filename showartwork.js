@@ -20,20 +20,22 @@ Hooks.once('canvasReady',()=>{
 	  	game.socket.emit("shareImage", {
 	      image: actor.data.img,
 	      title: "",
-	      uuid: game.actors.getName(actor.data.name).options.uuid
+	      uuid: actor.uuid
 	    });
 		
 	});
 	$('body').on('click','.show-item', (e)=>{
 		
-		let id = $(e.target).prev('.window-title').html();
-		
+		// let fullID = e.target.offsetParent.id.split('-');
+		let id = e.target.parentElement.firstElementChild.innerText; // Name
+		// let innerHTML = e.target.parentNode.nextElementSibling.innerHTML;
+		// let img = innerHTML.match('(?:src=\")([^\"]*)')[1];
 		let item = game.items.getName(id);
 		ui.notifications.info(game.i18n.format("SHOWART.message"));
 	  	game.socket.emit("shareImage", {
 	      image: item.data.img,
 	      title: item.data.name,
-	      uuid: game.items.getName(item.data.name).options.uuid
+	      uuid: item.uuid
 	    });
 		
 	});
